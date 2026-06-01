@@ -52,7 +52,7 @@ export default function NuevaVentaPage() {
     );
   }
 
-  if (!user) {
+  if (!user || !usuario) {
     return null;
   }
 
