@@ -1,6 +1,7 @@
 'use client';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { useAuth } from '@/contexts/AuthContext';
 import VentaForm from '@/components/VentaForm';
 
@@ -77,12 +78,22 @@ export default function NuevaVentaPage() {
               </p>
             </div>
           </div>
-          <button
-            onClick={handleLogout}
-            className="text-sm text-gray-500 hover:text-gray-800 font-medium transition-colors px-2 py-1 rounded-lg hover:bg-gray-100"
-          >
-            Salir
-          </button>
+          <div className="flex items-center gap-2">
+            {usuario.rol === 'admin' && (
+              <Link
+                href="/dashboard"
+                className="text-sm font-medium text-gray-600 hover:text-gray-900 px-3 py-1.5 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors"
+              >
+                Dashboard
+              </Link>
+            )}
+            <button
+              onClick={handleLogout}
+              className="text-sm text-gray-500 hover:text-gray-800 font-medium transition-colors px-2 py-1 rounded-lg hover:bg-gray-100"
+            >
+              Salir
+            </button>
+          </div>
         </div>
       </header>
 

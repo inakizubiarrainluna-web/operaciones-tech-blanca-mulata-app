@@ -16,6 +16,13 @@ const config: Config = {
           600: '#e11d48',
           700: '#be123c',
         },
+        bm: {
+          crudo: '#F5F0E8',
+          habano: '#C4A882',
+          chocolate: '#6B4C3B',
+          tierra: '#8B6F5E',
+          blanco: '#FDFBF7',
+        },
       },
     },
   },
